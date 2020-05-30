@@ -1,0 +1,29 @@
+{
+  "name": "use-visibility-percentage",
+  "version": "0.1.0",
+  "description": "A react hook",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0",
+    "build:commonjs": "babel src --out-dir lib",
+    "build:umd": "cross-env FILE_NAME=use-visibility-percentage webpack",
+    "build:umd:min": "cross-env NODE_ENV=production npm run build:umd",
+    "clean": "rimraf lib dist",
+    "build": "npm run clean && npm run build:commonjs && npm run build:umd && npm run build:umd:min"
+  },
+  "author": "fkrasnowski",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.1",
+    "@babel/preset-env": "^7.10.1",
+    "cross-env": "^7.0.2",
+    "rimraf": "^3.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "lodash.throttle": "^4.1.1",
+    "react": "^16.13.1"
+  }
+}
