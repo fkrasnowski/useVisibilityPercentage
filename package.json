@@ -1,6 +1,6 @@
 {
   "name": "use-visibility-percentage",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "A react hook",
   "main": "lib/index.js",
   "scripts": {
