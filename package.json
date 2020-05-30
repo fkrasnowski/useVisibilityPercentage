@@ -27,7 +27,6 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "lodash.throttle": "^4.1.1",
-    "react": "^16.13.1"
+    "lodash.throttle": "^4.1.1"
   }
 }
