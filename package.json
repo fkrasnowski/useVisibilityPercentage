@@ -13,6 +13,9 @@
   },
   "author": "fkrasnowski",
   "license": "MIT",
+  "peerDependencies": {
+    "react": ">= 16.8.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.10.1",
     "@babel/core": "^7.10.1",
