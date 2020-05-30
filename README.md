@@ -22,7 +22,13 @@ import useVisibiltyPercentage from 'use-visibilty-percentage';
 const Percent = () => {
   const [ref, percent] = useVisibiltyPercentage();
 
-  return <div className='box' style={{ opacity: percent.toPrecision(2) }} />;
+  return (
+    <div
+      ref={ref}
+      className='box'
+      style={{ opacity: percent.toPrecision(2) }}
+    />
+  );
 };
 ```
 
@@ -39,7 +45,13 @@ const Percent = () => {
     throttle: 30,
   });
 
-  return <div className='box' style={{ opacity: percent.toPrecision(2) }} />;
+  return (
+    <div
+      ref={ref}
+      className='box'
+      style={{ opacity: percent.toPrecision(2) }}
+    />
+  );
 };
 ```
 
