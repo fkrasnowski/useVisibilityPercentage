@@ -27,10 +27,10 @@ Using optional options:
 
 ```jsx
 import React from 'react';
-import useVisibiltyPerctange from 'use-visibilty-perctange';
+import useVisibiltyPercentage from 'use-visibilty-percentage';
 
 const Percent = () => {
-  const [ref, percent] = useVisibiltyPerctange({
+  const [ref, percent] = useVisibiltyPercentage({
     offsetTop: 20,
     offsetBottom: 20,
     throttle: 30,
