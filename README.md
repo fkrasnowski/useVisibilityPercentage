@@ -1,5 +1,8 @@
 # useVisibilityPercentage
 
+[![GitHub license](https://img.shields.io/github/license/fkrasnowski/useVisibilityPercentage)](https://github.com/fkrasnowski/useVisibilityPercentage/blob/master/LICENSE)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
 A react hook to measure percentage of element inside the window height(window.innerHeight).
 
 ## Installation
