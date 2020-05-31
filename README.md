@@ -3,7 +3,12 @@
 [![GitHub license](https://img.shields.io/github/license/fkrasnowski/useVisibilityPercentage)](https://github.com/fkrasnowski/useVisibilityPercentage/blob/master/LICENSE)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-A react hook to measure percentage of element inside the window height(window.innerHeight).
+A react hook to measure percentage of element inside the window height (window.innerHeight).
+
+<img src="https://p-ams2.pcloud.com/DLZ1WC6kfZENowf2ZKScJ7ZZ6gJGa7Z3VZZKD0ZXZDNkZpJZZZ4SF8BOuaAmbuVJdmrEjhFfBTqA57/th-22301109729-457x582.png"
+style="max-height: 300px"
+alt="Demonstration Image"
+/>
 
 ## Installation
 
@@ -11,7 +16,17 @@ A react hook to measure percentage of element inside the window height(window.in
 npm i use-visibilty-perctange --save
 ```
 
+Or
+
+```sh
+yarn add use-visibility-percentage
+```
+
 ## Usage
+
+```jsx
+const [ref, percent, position] = useVisibiltyPercentage(\ * { options } * \);
+```
 
 Basic usage:
 

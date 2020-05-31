@@ -1,7 +1,7 @@
 {
   "name": "use-visibility-percentage",
   "version": "0.3.4",
-  "description": "A react hook",
+  "description": "A react hook to measure visibility percentage of element on screen",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"No test specified\" && exit 0",

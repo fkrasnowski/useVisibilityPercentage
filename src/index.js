@@ -7,29 +7,51 @@ const useVisibiltyPerctange = ({
   offsetBottom = 0,
 } = {}) => {
   const ref = useRef();
-  const [percentage, setPercentage] = useState(0);
+  const [percentageAndPosition, setPercentageAndPosition] = useState([
+    0,
+    'center',
+  ]);
   useLayoutEffect(() => {
-    setPercentage(getPercentage(ref, window, offsetTop, offsetBottom));
+    setPercentageAndPosition(
+      getPercentageAndPosition(ref, window, offsetTop, offsetBottom)
+    );
     const scrollHandler = loThrottle(
-      () => setPercentage(getPercentage(ref, window, offsetTop, offsetBottom)),
+      () =>
+        setPercentageAndPosition(
+          getPercentageAndPosition(ref, window, offsetTop, offsetBottom)
+        ),
       throttle
     );
     window.addEventListener('scroll', scrollHandler);
     return () => window.removeEventListener('scroll', scrollHandler);
   }, [throttle, offsetTop, offsetBottom]);
-  return [ref, percentage];
+  return [ref, ...percentageAndPosition];
 };
 
-const getPercentage = (ref, window, offsetTop, offsetBottom) => {
+const getPercentageAndPosition = (ref, window, offsetTop, offsetBottom) => {
   const windowHeight = window.innerHeight;
-  let value = 0;
+  let nearPercentage = 0;
+  let position = 'center';
+
   const { top, bottom } = ref.current.getBoundingClientRect();
   const height = Math.abs(top - bottom);
   const ratio = (bottom - offsetTop) / height;
   const bottomRatio = (windowHeight - top - offsetBottom) / height;
-  if (bottom + offsetBottom > windowHeight) value = bottomRatio;
-  else value = ratio;
-  return value > 1 ? 1 : value < 0 ? 0 : value;
+  if (bottom + offsetBottom > windowHeight) {
+    nearPercentage = bottomRatio;
+    position = 'bottom';
+  } else {
+    nearPercentage = ratio;
+    position = 'top';
+  }
+  const percentage =
+    nearPercentage > 1 ? 1 : nearPercentage < 0 ? 0 : nearPercentage;
+  if (percentage === 0) {
+    position = position === 'top' ? 'above' : 'below';
+  } else if (percentage === 1) {
+    position = 'center';
+  }
+  return [percentage, position];
 };
 
 export default useVisibiltyPerctange;
