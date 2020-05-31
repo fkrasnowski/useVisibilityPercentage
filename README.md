@@ -5,7 +5,7 @@
 
 A react hook to measure percentage of element inside the window height (window.innerHeight).
 
-<img src="https://p-ams2.pcloud.com/DLZ1WC6kfZENowf2ZKScJ7ZZ6gJGa7Z3VZZKD0ZXZDNkZpJZZZ4SF8BOuaAmbuVJdmrEjhFfBTqA57/th-22301109729-457x582.png"
+<img src="https://p-ams2.pcloud.com/DLZnbT6kfZENowf2ZKScJ7ZZhx8Ga7Z3VZZKD0ZZTqkZpJZ9FZSpZmOpVi6tmPxF5n3i2TOzwahngh1ey/v-percentage.png"
 style="max-height: 300px"
 alt="Demonstration Image"
 />
@@ -27,6 +27,12 @@ yarn add use-visibility-percentage
 ```jsx
 const [ref, percent, position] = useVisibiltyPercentage(\ * { options } * \);
 ```
+
+| Property | Type      | Description                                                   |
+| -------- | --------- | ------------------------------------------------------------- |
+| ref      | react ref | Ref to element you want to monitor                            |
+| percent  | number    | Number between 0 and 1 indicating visible fragment of element |
+| position | string    | One of values _('above', 'top','center', 'bottom', 'below' )_ |
 
 Basic usage:
 
@@ -75,10 +81,10 @@ const Percent = () => {
 Provide these as object arguments in hook _( useVisibiltyPerctange({ **options** }) )_.
 
 | Name             | Type   | Default | Required | Description                      |
-| ---------------- | ------ | ------- | -------- | -------------------------------- |
-| **offsetTop**    | number | 0       | false    | The top offset of window view    |
-| **offsetBottom** | number | 0       | false    | The bottom offset of window view |
-| **throttle**     | number | 16      | false    | The throttle time in miliseconds |
+| ---------------- | ------ | :-----: | :------: | -------------------------------- |
+| **offsetTop**    | number |    0    |  false   | The top offset of window view    |
+| **offsetBottom** | number |    0    |  false   | The bottom offset of window view |
+| **throttle**     | number |   16    |  false   | The throttle time in miliseconds |
 
 ### To do
 
