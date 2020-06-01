@@ -4,8 +4,7 @@
   "description": "A react hook to measure visibility percentage of element on screen",
   "main": "lib/index.js",
   "files": [
-    "lib",
-    "media"
+    "lib"
   ],
   "scripts": {
     "test": "ava",
