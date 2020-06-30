@@ -19,6 +19,21 @@
   "peerDependencies": {
     "react": ">= 16.8.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fkrasnowski/useVisibilityPercentage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fkrasnowski/useVisibilityPercentage/issues"
+  },
+  "keywords": [
+    "react",
+    "react-hooks",
+    "hook",
+    "visibility",
+    "percentage",
+    "scroll"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.10.1",
     "@babel/core": "^7.10.1",

@@ -5,7 +5,7 @@
 
 A react hook to measure percentage of element inside the window height (window.innerHeight).
 
-<img src="media/use-visibilty-percentage.png"
+<img src="https://raw.githubusercontent.com/fkrasnowski/useVisibilityPercentage/master/media/use-visibilty-percentage.png"
 style="max-height: 300px"
 alt="Demonstration Image"
 />
