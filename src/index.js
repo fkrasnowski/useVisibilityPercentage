@@ -31,13 +31,10 @@ const useVisibiltyPerctange = ({
   )
 
   useLayoutEffect(() => {
-    setPercentageAndPosition(
-      getPercentageAndPosition(ref, window, offsetTop, offsetBottom)
-    )
-
     window.addEventListener('scroll', scrollHandler)
     return () => window.removeEventListener('scroll', scrollHandler)
-  }, [throttle, offsetTop, offsetBottom])
+  }, [scrollHandler])
+
   return [ref, ...percentageAndPosition]
 }
 

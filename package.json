@@ -8,8 +8,9 @@
   ],
   "scripts": {
     "test": "ava",
-    "build": "babel src --out-dir lib",
-    "clean": "rimraf lib dist"
+    "build": "npm run clean && babel src --out-dir lib",
+    "clean": "rimraf lib dist",
+    "publish": "npm run build && npm test"
   },
   "author": "fkrasnowski",
   "license": "MIT",
