@@ -9,10 +9,10 @@
   ],
   "scripts": {
     "test": "ava",
-    "build:ts": "tsc src/index -d --outFile dist/index.js --module amd",
+    "build:ts": "tsc src/index -d --outFile dist/index.js --module amd --moduleResolution node",
     "build": "npm run clean && npm run build:ts",
     "clean": "rimraf dist",
-    "publish": "npm run build && npm test"
+    "prepublish": "npm run build && npm test"
   },
   "author": "fkrasnowski",
   "license": "MIT",
