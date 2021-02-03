@@ -10,6 +10,11 @@ style="max-height: 300px"
 alt="Demonstration Image"
 />
 
+## Features
+
+- TypeScript support 🧔
+- Lightweight 🐔
+
 ## Installation
 
 ```sh
@@ -25,7 +30,7 @@ yarn add use-visibility-percentage
 ## Usage
 
 ```jsx
-const [ref, percent, position] = useVisibiltyPercentage(\ * { options } * \);
+const [percent, position] = useVisibiltyPercentage(ref, \ * { options } * \)
 ```
 
 | Property | Type      | Description                                                   |
@@ -37,11 +42,12 @@ const [ref, percent, position] = useVisibiltyPercentage(\ * { options } * \);
 Basic usage:
 
 ```jsx
-import React from 'react';
-import useVisibiltyPercentage from 'use-visibilty-percentage';
+import React from 'react'
+import useVisibiltyPercentage from 'use-visibilty-percentage'
 
 const Percent = () => {
-  const [ref, percent] = useVisibiltyPercentage();
+  const ref = useRef()
+  const [percent] = useVisibiltyPercentage(ref)
 
   return (
     <div
@@ -49,22 +55,23 @@ const Percent = () => {
       className='box'
       style={{ opacity: percent.toPrecision(2) }}
     />
-  );
-};
+  )
+}
 ```
 
 Using optional options:
 
 ```jsx
-import React from 'react';
-import useVisibiltyPercentage from 'use-visibilty-percentage';
+import React from 'react'
+import useVisibiltyPercentage from 'use-visibilty-percentage'
 
 const Percent = () => {
-  const [ref, percent] = useVisibiltyPercentage({
+  const ref = useRef()
+  const [percent] = useVisibiltyPercentage(ref, {
     offsetTop: 20,
     offsetBottom: 20,
     throttle: 30,
-  });
+  })
 
   return (
     <div
@@ -72,20 +79,16 @@ const Percent = () => {
       className='box'
       style={{ opacity: percent.toPrecision(2) }}
     />
-  );
-};
+  )
+}
 ```
 
 ### Options
 
-Provide these as object arguments in hook _( useVisibiltyPerctange({ **options** }) )_.
+Provide these as second argument to hook _( useVisibiltyPerctange(ref, { **options** }) )_.
 
 | Name             | Type   | Default | Required | Description                      |
 | ---------------- | ------ | :-----: | :------: | -------------------------------- |
 | **offsetTop**    | number |    0    |  false   | The top offset of window view    |
 | **offsetBottom** | number |    0    |  false   | The bottom offset of window view |
 | **throttle**     | number |   16    |  false   | The throttle time in miliseconds |
-
-### To do
-
-- Do tests!
