@@ -9,8 +9,7 @@
   ],
   "scripts": {
     "test": "ava",
-    "build:ts": "tsc src/index -d --outFile dist/index.js --module amd --moduleResolution node",
-    "build": "npm run clean && npm run build:ts",
+    "build": "npm run clean && tsc",
     "clean": "rimraf dist",
     "prepublish": "npm run build && npm test"
   },
